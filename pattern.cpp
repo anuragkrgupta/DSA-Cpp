@@ -20,3 +20,8 @@ int main(){
 }
 
 // printing numbers
+// input of des: 3
+// output:
+// 321
+// 321
+// 321
