@@ -30,12 +30,12 @@ int main() {
     int i = 0;
 
     while (n != 0) {
-        int bit = n & 1;
-        ans = (bit * pow(10, i)) + ans;
+        int bit = n & 1; //it extracts the last bit of the integer
+        ans = (bit * pow(10, i)) + ans; // it places the bit at the correct deciman places
 
-        cout << "bit = " << bit << ", ans = " << ans << endl;
+        cout << "bit = " << bit << ", ans = " << ans << endl; // it prints the each process
 
-        n = n >> 1;
+        n = n >> 1; // right shift by 1
         i++;
     }
 
