@@ -18,34 +18,52 @@
 // }
 
 // now we will follow some different approach
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
+// int main() {
+//     int n;
+//     cin >> n;
+
+//     if (n == 0) {
+//         cout << 0;
+//         return 0;
+//     }
+
+//     if (n < 0) {
+//         cout << "-";
+//         n = -n;     
+//     }
+
+//     int ans = 0;
+//     int place = 1;
+
+//     while (n != 0) {
+//         int bit = n & 1;  //it calculates the last bit of an integer
+//         ans = ans + bit * place; 
+//         place *= 10;
+//         n = n >> 1; //right shift by 1
+//     }
+
+//     cout << ans;
+
+//     return 0;
+// }
+
+// lets convert binary to decimal
+
+#include<iostream>
+using namespace std;
 int main() {
     int n;
-    cin >> n;
-
-    if (n == 0) {
-        cout << 0;
-        return 0;
+    cin >>n;
+    int ans = 0, i = 0, place = 1;
+    while (n!=0) {
+        int digit = n%10;
+            ans = ans + digit*place;
+            place *=2;
+        
+        n = n/10;
     }
-
-    if (n < 0) {
-        cout << "-";
-        n = -n;     
-    }
-
-    int ans = 0;
-    int place = 1;
-
-    while (n != 0) {
-        int bit = n & 1;  //it calculates the last bit of an integer
-        ans = ans + bit * place; 
-        place *= 10;
-        n = n >> 1; //right shift by 1
-    }
-
-    cout << ans;
-
-    return 0;
+    cout<< ans;
 }
