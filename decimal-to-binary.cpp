@@ -19,25 +19,33 @@
 
 // now we will follow some different approach
 #include <iostream>
-#include <math.h>
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
 
-    double ans = 0;
-    int i = 0;
+    if (n == 0) {
+        cout << 0;
+        return 0;
+    }
+
+    if (n < 0) {
+        cout << "-";
+        n = -n;     
+    }
+
+    int ans = 0;
+    int place = 1;
 
     while (n != 0) {
-        int bit = n & 1; //it extracts the last bit of the integer
-        ans = (bit * pow(10, i)) + ans; // it places the bit at the correct deciman places
-
-        cout << "bit = " << bit << ", ans = " << ans << endl; // it prints the each process
-
-        n = n >> 1; // right shift by 1
-        i++;
+        int bit = n & 1;  //it calculates the last bit of an integer
+        ans = ans + bit * place; 
+        place *= 10;
+        n = n >> 1; //right shift by 1
     }
 
     cout << ans;
+
+    return 0;
 }
