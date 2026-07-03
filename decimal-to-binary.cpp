@@ -7,11 +7,11 @@
 //    cin >> n;
 //     int ans [10]= {};
 //     for ( i=0; n!=0; i++){
-//         ans[i] = n%2;
-//         n = n/2;
+//         ans[i] = n%2; // it is for calculating reminder
+//         n = n/2; // it is for calculating quotiont
 
 //     }
-//     for (int j=i-1; j>=0; j--){
+//     for (int j=i-1; j>=0; j--){  //it is for reversing the array
 //         cout<< ans[j];
 //     }
 //     return 0;
