@@ -44,7 +44,7 @@ int finding(int arr[], int size){
 
 
 int main(){
-    int arr[] = {2, 3, 1, 6, 3, 6, 2, 2, 2, 5, 6, 1, 0, 6};
+    int arr[] = {2, 3, 1, 6, 3, 6, 2, 115, 2, 5, 6, 1, 0, 6};
     int n = sizeof(arr)/sizeof(arr[0]);
     finding(arr, n);
     return 0;
