@@ -18,7 +18,7 @@ int pivot(int arr[], int size){
 
 int search(int arr[],int start, int end, int key){
     
-    while(start < end){
+    while(start <= end){
         int mid = start + (end - start)/2;
         if(arr[mid] == key){
             return mid;
