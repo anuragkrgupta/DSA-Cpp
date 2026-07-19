@@ -34,7 +34,7 @@ int search(int arr[],int start, int end, int key){
 
 }
 
-int compare(int arr[], int size, int key){
+int decision(int arr[], int size, int key){
    int index = pivot(arr, size);
 
    if(key >= arr[index] && key <= arr[size - 1]){
@@ -54,5 +54,5 @@ int main(){
     int key, end;
     cout << "Enter the key to search: ";
     cin >> key;
-    cout << compare(arr, size, key);
+    cout << decision(arr, size, key);
 }
