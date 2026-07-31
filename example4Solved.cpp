@@ -18,8 +18,7 @@ int pivot(int arr[], int size){
 int main(){
     int arr[] = {4, 5, 6, 7, 1, 2, 3};
     // int arr[] = {3,4,1,2};
-    // int arr[] = {7,8,9,10,4,5,6};
-    // int arr[] = {5,6,7,1,2,3,4};
+    
     int size = sizeof(arr)/sizeof(arr[0]);
     cout << pivot(arr, size);
 }
