@@ -1,17 +1,17 @@
 // find the sqrt using binary search.
 #include<iostream>
 using namespace std;
-int check( int size){
+int check( int x){
     int start = 0;
-    int end = size;
+    int end = x;
     int ans = -1;
     while(start <= end){
         long long int mid = start + (end - start)/2;
         long long int sqr = mid * mid;
-        if(sqr == size){
+        if(sqr == x/mid){
             return mid;
         }
-        else if(sqr < size) {
+        else if(sqr < x) {
             ans = mid;
             start = mid + 1;
         }
