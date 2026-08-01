@@ -31,7 +31,6 @@ int search(int arr[],int start, int end, int key){
         }
     }
     return -1;
-
 }
 
 int decision(int arr[], int size, int key){
