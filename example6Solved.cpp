@@ -41,5 +41,4 @@ int main(){
     check(n); 
     int tempsol = check(n);
     cout<< deci(n, tempsol);
-
 }
