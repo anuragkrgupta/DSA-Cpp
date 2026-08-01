@@ -8,15 +8,26 @@ int check( int x){
     while(start <= end){
         long long int mid = start + (end - start)/2;
         long long int sqr = mid * mid;
-        if(sqr == x/mid && x%mid ==0){
+        if(sqr == x){
             return mid;
         }
         else if(sqr < x) {
             ans = mid;
             start = mid + 1;
         }
-        else{
+        else{ 
             end = mid - 1;
+        }
+    }
+    return ans;
+}
+double deci(int n, int tempsol){
+    double factor = 1;
+    double ans = tempsol;
+    for(int i = 0; i < 3; i++){
+        factor = factor / 10;
+        for(double j = ans; j*j<=n; j=j+factor){
+            ans = j;
         }
     }
     return ans;
@@ -27,5 +38,8 @@ int main(){
     int n;
     cout<< "Enter the number: ";
     cin >> n;
-    cout << check(n); 
+    check(n); 
+    int tempsol = check(n);
+    cout<< deci(n, tempsol);
+
 }
