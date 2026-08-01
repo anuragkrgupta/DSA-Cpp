@@ -8,7 +8,7 @@ int check( int x){
     while(start <= end){
         long long int mid = start + (end - start)/2;
         long long int sqr = mid * mid;
-        if(sqr == x/mid){
+        if(sqr == x/mid && x%mid ==0){
             return mid;
         }
         else if(sqr < x) {
