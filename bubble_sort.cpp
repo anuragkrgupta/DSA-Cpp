@@ -26,5 +26,5 @@ int main(){
     return 0;
 }
 
-//time complexity = O(n*n);
+//time complexity = O(n*n);  bestCase(if array is already sortted) = O(n);
 //space complexity = O(1);
