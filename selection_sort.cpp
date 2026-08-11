@@ -19,3 +19,6 @@
 
     return 0;
  } 
+
+ //time complexity (bestCase & worstCase) = O(n*n);
+ //space complexity = O(1);
