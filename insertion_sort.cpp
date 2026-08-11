@@ -3,10 +3,10 @@
 void sortt(int arr[], int n){
     int i = 1;
     while(i<n){
-        int check = arr[i];
+        int temp = arr[i];
         int j = i-1;
         while(j>=0){
-            if(arr[j]>check){
+            if(arr[j]>temp){
                 arr[j+1] = arr[j];
                 j--;
             }
@@ -14,7 +14,7 @@ void sortt(int arr[], int n){
                 break;
             }
         }
-        arr[j+1] = check;
+        arr[j+1] = temp;
         i++;
     }
 }
