@@ -6,7 +6,7 @@ void sortt(int arr[], int n){
         int check = arr[i];
         int j = i-1;
         while(j>=0){
-            if(arr[j]>arr[j+1]){
+            if(arr[j]>check){
                 arr[j+1] = arr[j];
                 j--;
             }
