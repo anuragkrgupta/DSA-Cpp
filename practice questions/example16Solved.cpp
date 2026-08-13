@@ -2,14 +2,13 @@
 // [2, 0, 2, 1, 1, 0]
 #include<iostream>
 int sorrt(int arr[], int size){
-    for(int i = 0; i<size-1; i++){
-        int minimum = i;
-        for(int j = i + 1; j<size; j++){
-            if(arr[minimum]>= arr[j]){
-                minimum = j;
+    for(int i = 1; i<size; i++){
+        for(int j = 0; j<size-1; j++){
+            if(arr[j]>= arr[j+1]){
+                std::swap(arr[j+1], arr[j]);
             }
         }
-        std::swap(arr[minimum], arr[i]);
+        
     }
 }
 
