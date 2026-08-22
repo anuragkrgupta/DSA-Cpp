@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // reversing an array using vector
+=======
+// reversing an array 
+>>>>>>> ddb51b89be8ed689ce68089af59a9fe083ccbffb
 #include<iostream>
 #include<vector>
 int main(){
