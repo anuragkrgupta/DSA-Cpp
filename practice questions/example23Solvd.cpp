@@ -1,3 +1,4 @@
+// check if array is sorted and rotated
 // Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
 
 // There may be duplicates in the original array.
@@ -23,25 +24,18 @@
  
 #include<iostream>
 bool check(int arr[], int n){
-    int start = 0; 
-    int end = n-1;
     int count = 0;
     for (int i = 0; i < n; i++){
-        if(arr[start] < arr[start+1]){
-            start++;
-            return true;
-        }
-        else{
+        if(arr[i] < arr[i+1]){
             count++;
         }
     }
-    if(count > 1){
-        return false;
-    }
+    return count <=1;
 }
 
 int main(){
     int arr[] = {2,1,3,4};
     int size = sizeof(arr)/sizeof(arr[0]);
     std::cout<<check(arr, size);
+    return 0;
 }
