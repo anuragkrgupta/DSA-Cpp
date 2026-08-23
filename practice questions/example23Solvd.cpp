@@ -21,3 +21,27 @@
 // Explanation: [1,2,3] is the original sorted array.
 // You can rotate the array by x = 0 positions (i.e. no rotation) to make nums.
  
+#include<iostream>
+bool check(int arr[], int n){
+    int start = 0; 
+    int end = n-1;
+    int count = 0;
+    for (int i = 0; i < n; i++){
+        if(arr[start] < arr[start+1]){
+            start++;
+            return true;
+        }
+        else{
+            count++;
+        }
+    }
+    if(count > 1){
+        return false;
+    }
+}
+
+int main(){
+    int arr[] = {2,1,3,4};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    std::cout<<check(arr, size);
+}
