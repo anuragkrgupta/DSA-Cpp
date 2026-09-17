@@ -75,3 +75,23 @@ int maxProfit(vector<int> &prices)
 // 1 <= prices.length <= 3 * 104
 // 0 <= prices[i] <= 104
 
+ int maxProfit(vector<int>& prices) {
+        int maxProfit(vector<int>& prices) {
+    int minp = INT_MAX;
+    int maxP = 0;
+    for (int i = 0; i < prices.size(); i++)
+    {
+       int currentP = prices[i];
+       if(currentP < minp){
+        minp = currentP;
+        }
+      int currentProfit = currentP - minp;
+
+      if(maxP < currentProfit){
+        maxP = currentProfit;
+      }
+
+    }
+    return maxP;
+    }
+}
