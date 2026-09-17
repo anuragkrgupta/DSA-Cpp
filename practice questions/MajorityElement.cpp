@@ -31,10 +31,10 @@ int majorityElement(vector<int>& nums){
     //if it appears more than n/2 times it is major element.
     unordered_map<int, int> freq;
     int n = nums.size();
-    for(int i = 0;i<n; i++){
-        freq[num[i]]++;
-        if(freq[num[i]]> n/2){
-            return num[i];
+    for(int x : nums){
+        freq[x]++;
+        if(freq[x]> n/2){
+            return x;
         }
     }
     return -1;
