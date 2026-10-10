@@ -30,7 +30,7 @@ string under1000(int n) {
         string result = ones[hundreds] + " hundred";
 
         if (remainder > 0) {
-            result += " " + under1000(remainder);
+            result += " and " + under1000(remainder);
         }
 
         return result;
