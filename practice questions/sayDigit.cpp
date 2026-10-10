@@ -1,5 +1,5 @@
 // say the digits in english . for example: 321 = three two one; 415 = four one five;
-
+// Note: This version handles non-negative integers. Negative numbers would need additional handling.
 #include <bits/stdc++.h>
 using namespace std;
 string words[] = {
