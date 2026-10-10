@@ -1,4 +1,4 @@
-
+// implementing recursive number-to-English conversion in C++ using the Indian numbering system, supporting numbers up to lakhs. 
 #include <bits/stdc++.h>
 using namespace std;
 
