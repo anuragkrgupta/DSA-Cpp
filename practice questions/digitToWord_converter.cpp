@@ -56,13 +56,13 @@ string under1000(int n) {
     return result;
 }
 
-// Converts numbers up to 99,99,999
 string numberToWords(int n) {
-    if (n == 0) {
-        return "zero";
-    }
+    if (n == 0) return "zero";
 
     string result = "";
+
+    int crores = n / 10000000;
+    n %= 10000000;
 
     int lakhs = n / 100000;
     n %= 100000;
@@ -72,21 +72,30 @@ string numberToWords(int n) {
 
     int remainder = n;
 
+    if (crores > 0) {
+        result += under1000(crores) + " crore";
+    }
+
     if (lakhs > 0) {
-        result += under1000(lakhs) + " lakh ";
+        if (!result.empty()) result += " ";
+        result += under1000(lakhs) + " lakh";
     }
 
     if (thousands > 0) {
-        result += under1000(thousands) + " thousand ";
+        if (!result.empty()) result += " ";
+        result += under1000(thousands) + " thousand";
     }
 
     if (remainder > 0) {
-        result += under1000(remainder);
-    }
+        if (!result.empty()) result += " ";
 
-    // Remove trailing spaces
-    while (!result.empty() && result.back() == ' ') {
-        result.pop_back();
+        // Use "and" only when the final remainder is below 100
+        // and a higher group exists.
+        if (remainder < 100 && !result.empty()) {
+            result += "and ";
+        }
+
+        result += under1000(remainder);
     }
 
     return result;
